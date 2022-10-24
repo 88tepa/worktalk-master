@@ -31,7 +31,7 @@ public class Fragment extends AppCompatActivity {
 
         findViewById(R.id.iv_project).setOnClickListener(mClick);
         findViewById(R.id.iv_talk).setOnClickListener(mClick);
-        findViewById(R.id.ib_settings).setOnClickListener(mClick);
+        findViewById(R.id.iv_settings).setOnClickListener(mClick);
     }
     View.OnClickListener mClick = new View.OnClickListener() {
         public void onClick(View v) {
@@ -43,7 +43,7 @@ public class Fragment extends AppCompatActivity {
                 case R.id.iv_talk:
                     transaction.replace(R.id.framelayout, fragTalk).commitAllowingStateLoss();
                     break;
-                case R.id.ib_settings:
+                case R.id.iv_settings:
                     transaction.replace(R.id.framelayout, fragSettings).commitAllowingStateLoss();
                     break;
             }
