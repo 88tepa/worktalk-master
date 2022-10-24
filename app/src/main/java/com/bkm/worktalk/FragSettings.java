@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class FragProject extends Fragment {
+public class FragSettings extends Fragment {
 
     @Nullable
     @Override

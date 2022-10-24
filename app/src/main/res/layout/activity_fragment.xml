@@ -70,12 +70,12 @@
             android:orientation="vertical"
             android:paddingVertical="10dp">
 
-            <ImageView
-                android:id="@+id/iv_setting"
+            <ImageButton
+                android:id="@+id/ib_settings"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/setting" />
+                app:srcCompat="@drawable/settings" />
         </LinearLayout>
 
         <LinearLayout

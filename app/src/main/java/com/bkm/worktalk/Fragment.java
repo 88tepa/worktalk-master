@@ -11,8 +11,8 @@ public class Fragment extends AppCompatActivity {
 
     private FragmentManager fragmentManager;
     private FragProject fragProject;
-//    private FragTalk fragTalk;
-//    private FragSettings fragSettings;
+    private FragTalk fragTalk;
+    private FragSettings fragSettings;
     private FragmentTransaction transaction;
 
     @Override
@@ -23,24 +23,29 @@ public class Fragment extends AppCompatActivity {
         fragmentManager = getSupportFragmentManager();
 
         fragProject = new FragProject();
+        fragTalk = new FragTalk();
+        fragSettings = new FragSettings();
 
         transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.framelayout, fragProject).commitAllowingStateLoss();
 
         findViewById(R.id.iv_project).setOnClickListener(mClick);
+        findViewById(R.id.iv_talk).setOnClickListener(mClick);
+        findViewById(R.id.ib_settings).setOnClickListener(mClick);
     }
-    View.OnClickListener mClick = new View.OnClickListener()
-    {
-        public void onClick(View v)
-        {
+    View.OnClickListener mClick = new View.OnClickListener() {
+        public void onClick(View v) {
             transaction = fragmentManager.beginTransaction();
-
-            switch(v.getId())
-            {
+            switch(v.getId()) {
                 case R.id.iv_project:
                     transaction.replace(R.id.framelayout, fragProject).commitAllowingStateLoss();
                     break;
-
+                case R.id.iv_talk:
+                    transaction.replace(R.id.framelayout, fragTalk).commitAllowingStateLoss();
+                    break;
+                case R.id.ib_settings:
+                    transaction.replace(R.id.framelayout, fragSettings).commitAllowingStateLoss();
+                    break;
             }
         }
     };

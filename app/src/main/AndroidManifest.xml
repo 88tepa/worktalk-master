@@ -16,6 +16,12 @@
         android:theme="@style/Theme.Worktalk"
         tools:targetApi="31">
         <activity
+            android:name=".FragSettings"
+            android:exported="false" />
+        <activity
+            android:name=".FragTalk"
+            android:exported="false" />
+        <activity
             android:name=".FragProject"
             android:exported="false" />
         <activity
